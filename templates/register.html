@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Register</title>
+    <style>
+      body {
+        background-image: url("https://wallpapers.com/images/hd/cyber-security-padlock-chip-mce2dfivcnegbhtv.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      h3 {
+        text-align: center;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+    <h3>Online Banking Transaction Using Face</h3>
+    <!------ Include the above in your HEAD tag ---------->
+    <br />
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header"><b>Register Your Details</b></div>
+            <div class="card-body">
+              <form class="form-horizontal" method="post" action="#">
+                <div class="form-group">
+                  <label for="name" class="cols-sm-2 control-label"
+                    >Your Name</label
+                  >
+                  <div class="cols-sm-10">
+                    <div class="input-group">
+                      <span class="input-group-addon"
+                        ><i class="fa fa-user fa" aria-hidden="true"></i
+                      ></span>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="name"
+                        id="name"
+                        placeholder="Enter your Name"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="cols-sm-2 control-label"
+                    >Your Email</label
+                  >
+                  <div class="cols-sm-10">
+                    <div class="input-group">
+                      <span class="input-group-addon"
+                        ><i class="fa fa-envelope fa" aria-hidden="true"></i
+                      ></span>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="email"
+                        id="email"
+                        placeholder="Enter your Email"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="username" class="cols-sm-2 control-label"
+                    >Username</label
+                  >
+                  <div class="cols-sm-10">
+                    <div class="input-group">
+                      <span class="input-group-addon"
+                        ><i class="fa fa-users fa" aria-hidden="true"></i
+                      ></span>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="username"
+                        id="username"
+                        placeholder="Enter your Username"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="password" class="cols-sm-2 control-label"
+                    >Password</label
+                  >
+                  <div class="cols-sm-10">
+                    <div class="input-group">
+                      <span class="input-group-addon"
+                        ><i class="fa fa-lock fa-lg" aria-hidden="true"></i
+                      ></span>
+                      <input
+                        type="password"
+                        class="form-control"
+                        name="password"
+                        id="password"
+                        placeholder="Enter your Password"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="username" class="cols-sm-2 control-label"
+                    >Phone Number</label
+                  >
+                  <div class="cols-sm-10">
+                    <div class="input-group">
+                      <span class="input-group-addon"
+                        ><i class="fa fa-users fa" aria-hidden="true"></i
+                      ></span>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="phone"
+                        id="username"
+                        placeholder="Enter your Phone Number"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="username" class="cols-sm-2 control-label"
+                    >Bank Name</label
+                  >
+                  <div class="cols-sm-10">
+                    <div class="input-group">
+                      <span class="input-group-addon"
+                        ><i class="fa fa-users fa" aria-hidden="true"></i
+                      ></span>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="bname"
+                        id="username"
+                        placeholder="Enter your Bank Name"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="username" class="cols-sm-2 control-label"
+                    >Aadhar Number</label
+                  >
+                  <div class="cols-sm-10">
+                    <div class="input-group">
+                      <span class="input-group-addon"
+                        ><i class="fa fa-users fa" aria-hidden="true"></i
+                      ></span>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="aadhar"
+                        id="username"
+                        placeholder="Enter your Aadhar Number"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-lg btn-block login-button"
+                  >
+                    Register
+                  </button>
+                </div>
+                <div class="btn btn-primary w-100 btn-lg">
+                  <a href="{{url_for('login')}}" style="color: white">Login</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

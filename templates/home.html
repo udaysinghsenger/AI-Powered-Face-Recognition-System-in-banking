@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Online Bank Transaction Using Face Recognition </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="{{url_for('transaction_details')}}">Transaction Details</a></li>
+      <li><a href="{{url_for('check_balance')}}">Check Balance</a></li>
+      <li><a href="/">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+    {% if authorized %}
+      <h1>TRANSACTION SUCCESS</h1>
+    {% elif unauthorized %} 
+      <h1>Unauthorized TRANSACTION</h1> 
+    {% elif Invalid %} 
+    <h1>Invalid TRANSACTION</h1> 
+    {% elif invalid_access %} 
+    <h1>Invalid Access</h1> 
+    {% endif %}
+    {% if name %}
+        <h3>Welcome {{name}}</h3><br>
+        <h2>Your account number : {{acc_no}} and Pin : {{pin}}</h2>
+      
+      <form action="{{url_for('home')}}" method="POST">
+        <input type="text" placeholder='Enter your A/C Number' name='acc_no'><br><br>
+        <input type="text" placeholder='Enter your name' name='name'><br><br>
+        <input type="text" placeholder='Enter your PIN' name='pin'><br><br>
+        <input type="text" placeholder='Enter Recipient Name' name='r_name'><br><br>
+        <input type="text" placeholder='Enter To Account Number' name='to_acc'><br><br>
+        <input type="text" placeholder='Enter The Amount' name='amount'><br><br>
+        <input type="submit" class="btn btn-primary" value="Transact">
+      </form>
+     
+    {% endif %}
+</div>
+
+</body>
+</html>
